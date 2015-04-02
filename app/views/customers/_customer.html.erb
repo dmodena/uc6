@@ -1,20 +1,21 @@
 <div class="customer">
+  <div class="corner">
   <%= link_to 'edit', edit_customer_path(customer) %>
   <%= link_to 'x', customer, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
   <h2><%= customer.full_name %></h2>
   <% if customer.image.present? %>
     <%= image_tag customer.image  %>
   <% else %>
     <%= customer.image %>
   <% end %>
-  <p class="label">Province: 
-
+  <p><span class="label">Province:</span> 
     <% if customer.province_id? %>
       <%= customer.province.name %>
     <% else %>
       None
     <% end %></p>
-  <p class="label">Phone: <%= customer.phone_number %></p>
-  <p class="label">Email: <%= customer.email_address %></p>
-  <p class="label">Notes: <%= customer.notes %></p>
+  <p><span class="label">Phone:</span> <%= customer.phone_number %></p>
+  <p><span class="label">Email:</span> <%= customer.email_address %></p>
+  <p><span class="label">Notes:</span> <%= customer.notes %></p>
 </div>

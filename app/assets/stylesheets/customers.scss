@@ -1,3 +1,27 @@
 // Place all the styles related to the Customers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$body-bg: #DDD;
+$customer-bg: #FFF;
+
+body{
+	background-color: $body-bg;
+}
+
+.customer{
+	position: relative;
+	display: inline-block;
+	width: 260px;
+	height: 700px;
+	padding: 5px;
+	margin: 20px;
+	background-color: $customer-bg;
+	border: 1px solid #000;
+	box-shadow: 1px 1px 1px #000;
+	overflow: auto;
+}
+
+.corner{
+	float: right;
+}
