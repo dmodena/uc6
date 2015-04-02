@@ -7,6 +7,13 @@
   <% else %>
     <%= customer.image %>
   <% end %>
+  <p class="label">Province: 
+
+    <% if customer.province_id? %>
+      <%= customer.province.name %>
+    <% else %>
+      None
+    <% end %></p>
   <p class="label">Phone: <%= customer.phone_number %></p>
   <p class="label">Email: <%= customer.email_address %></p>
   <p class="label">Notes: <%= customer.notes %></p>

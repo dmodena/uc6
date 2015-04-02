@@ -15,6 +15,10 @@
     <%= f.label :full_name %><br>
     <%= f.text_field :full_name %>
   </div>
+  <div>
+    <%= f.label :province_id %><br>
+    <%= f.select(:province_id, options_from_collection_for_select(@provinces, 'id', 'name')) %>
+  </div>
   <div class="field">
     <%= f.label :phone_number %><br>
     <%= f.text_field :phone_number %>
