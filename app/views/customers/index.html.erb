@@ -20,7 +20,13 @@
         <td><%= customer.full_name %></td>
         <td><%= customer.phone_number %></td>
         <td><%= customer.email_address %></td>
-        <td><%= customer.image %></td>
+        <td>
+          <% if customer.image.present? %>
+            <%= image_tag customer.image  %>
+          <% else %>
+            <%= customer.image %>
+          <% end %>
+        </td>
         <td><%= customer.notes %></td>
         <td><%= link_to 'Show', customer %></td>
         <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
